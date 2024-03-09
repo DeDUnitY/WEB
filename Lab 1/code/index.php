@@ -28,3 +28,12 @@ $last_month = 1187.23;
 $this_month = 1089.98;
 echo "разница: " . ($last_month - $this_month);
 echo "\n";
+
+// task 3
+echo "<h3>task 3:</h3>";
+$num_languages = 4;
+$months = 11;
+$days = $months*16;
+$days_per_language = $days/$num_languages;
+echo $days_per_language;
+echo "\n";

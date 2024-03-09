@@ -140,3 +140,55 @@ function PrintStringReturnNumber($Item)
 {
     return strlen($Item);
 }
+// task 8
+echo "<h3>task 8:</h3>";
+$my_num = PrintStringReturnNumber($my_str);
+echo $my_str . " : " . $my_num . "\n";
+
+function IncreaseEnthusiasm($Item)
+{
+    return "$Item" . "!";
+}
+
+echo IncreaseEnthusiasm($my_str) . "\n";
+
+function RepeatThreeTimes($Item)
+{
+    return $Item . " " . $Item . " " . $Item;
+}
+
+echo RepeatThreeTimes($my_str) . "\n";
+echo IncreaseEnthusiasm(RepeatThreeTimes($my_str)) . "\n";
+echo RepeatThreeTimes(IncreaseEnthusiasm($my_str)) . "\n";
+
+function Cut($str, $end = 10)
+{
+    return substr_replace($str, "", $end, strlen($str) - $end);
+}
+
+echo Cut($my_str, 2) . "\n";
+
+function PrintArr($arr, $i = 0)
+{
+    echo $arr[$i] . " ";
+    if (array_key_last($arr) > $i) {
+        PrintArr($arr, ++$i);
+    }
+}
+
+PrintArr($mass);
+
+function SumOfNumbers(int $num)
+{
+    $res = 0;
+    while ($res != 0) {
+        $res += $num % 10;
+        $num = intdiv($num, 10);
+    }
+    if ($res > 9) {
+        $res = SumOfNumbers($res);
+    }
+    return $res;
+}
+
+echo SumOfNumbers(1743) . "\n";

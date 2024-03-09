@@ -33,24 +33,102 @@ echo "\n";
 echo "<h3>task 3:</h3>";
 $num_languages = 4;
 $months = 11;
-$days = $months*16;
-$days_per_language = $days/$num_languages;
+$days = $months * 16;
+$days_per_language = $days / $num_languages;
 echo $days_per_language;
 echo "\n";
 
 // task 4
 echo "<h3>task 4:</h3>";
-echo 8**2;
+echo 8 ** 2;
 echo "\n";
 
 // task 5
 echo "<h3>task 5:</h3>";
 $my_num = 64;
 $answer = $my_num;
-$answer +=2;
-$answer *=2;
-$answer -=2;
-$answer /=2;
-$answer -=$my_num;
+$answer += 2;
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
+$answer -= $my_num;
 echo $answer;
 echo "\n";
+
+// task 6
+echo "<h3>task 6:</h3>";
+$a = 10;
+$b = 3;
+echo $a % $b . "\n";
+
+if (0 === $a % $b) {
+    echo "Делится\n";
+} else {
+    echo "Делится с остатком: " . ($a % $b) . "\n";
+}
+$st = pow(2, 10);
+echo "2**10: " . $st . "\n";
+$sq = sqrt(245);
+echo "корень из 245: " . $sq . "\n";
+$mass = [4, 2, 5, 19, 13, 0, 10];
+$res = 0;
+foreach ($mass as $i) {
+    $res += pow($i, 2);
+}
+$res = sqrt($res);
+echo "корень из суммы квадратов элементов: " . $res . "\n";
+
+echo round(sqrt(349), 0) . " " . round(sqrt(349), 1) . " " . round(sqrt(349), 2) . "\n";
+$ce = ceil(sqrt(587));
+$fl = floor(sqrt(587));
+$Arr = [
+    "ceil" => $ce,
+    "floor" => $fl,
+];
+
+$mass = [4, -2, 5, 19, -130, 0, 10];
+echo min($mass) . "\n";
+echo max($mass) . "\n";
+
+echo "случайное число: " . rand(1, 100) . "\n";
+$massRand = [];
+echo "случайные числа: ";
+for ($i = 0; $i < 10; $i++) {
+    $ArrayOfRandNum[$i] = rand(1, 100);
+    echo $ArrayOfRandNum[$i] . " ";
+}
+echo "\n";
+$a = rand(1, 50);
+$b = rand(50, 100);
+echo "модуль разности: " . abs($a - $b) . "\n";
+
+$mass1 = [1, 2, -1, -2, 3, -3];
+$mass2 = [];
+echo "Новый массив: ";
+for ($i = 0; $i < 6; $i++) {
+    $mass2[$i] = abs($mass1[$i]);
+    echo $mass2[$i] . " ";
+}
+echo "\n";
+
+$num1 = 99;
+$numOfDel = [];
+for ($i = 1; $i <= $num1; $i++) {
+    if (0 === $num1 % $i) {
+        $numOfDel[] = $i;
+    }
+}
+echo "Делители: ";
+for ($i = 0; $i < count($numOfDel); $i++) {
+    echo $numOfDel[$i] . " ";
+}
+echo "\n";
+
+$mass = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+$counter = 0;
+$i = 0;
+while ($counter <= 10) {
+    $counter += $mass[$i];
+    $i++;
+}
+echo "Необходимо ".$i." чис(ла\ел) из массива\n";

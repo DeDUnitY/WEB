@@ -131,4 +131,12 @@ while ($counter <= 10) {
     $counter += $mass[$i];
     $i++;
 }
-echo "Необходимо ".$i." чис(ла\ел) из массива\n";
+echo "Необходимо " . $i . " чис(ла\ел) из массива\n";
+
+// task 7
+echo "<h3>task 7:</h3>";
+$my_str = "test";
+function PrintStringReturnNumber($Item)
+{
+    return strlen($Item);
+}

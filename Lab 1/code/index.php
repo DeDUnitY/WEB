@@ -311,3 +311,22 @@ echo "<h3>task 11:</h3>";
 for ($i = 1; $i < 21; $i++) {
     echo str_repeat("x", $i) . "\n";
 }
+// task 12
+echo "<h3>task 12:</h3>";
+$arr = [];
+for ($i = 0; $i < 8; $i++) {
+    $arr[$i] = rand(1, 50);
+}
+echo "Среднее сначение: ".(array_sum($arr) / count($arr))."\n";
+
+echo "Сумма от 1 до 100".array_sum(range(1, 100))."\n";
+
+$mass = [1,2,4,5];
+$new_mass = array_map("sqrt", $arr);
+
+$mass = array_combine(range('a', 'z'), range(1, 26));
+
+$str = '1234567890';
+$pari = str_split($str, 2);
+
+echo "Сумма пар: ", array_sum($pari);

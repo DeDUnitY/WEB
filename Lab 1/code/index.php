@@ -140,6 +140,7 @@ function PrintStringReturnNumber($Item)
 {
     return strlen($Item);
 }
+
 // task 8
 echo "<h3>task 8:</h3>";
 $my_num = PrintStringReturnNumber($my_str);
@@ -192,3 +193,64 @@ function SumOfNumbers(int $num)
 }
 
 echo SumOfNumbers(1743) . "\n";
+
+// task 9
+echo "<h3>task 9:</h3>";
+
+$mass = [];
+for ($i = 1; $i < 11; $i++) {
+    $mass[$i - 1] = str_repeat("*", $i);
+}
+PrintArr($mass);
+echo "\n";
+function arrayFill($str, $num)
+{
+    $res = [];
+    for ($i = 1; $i < $num; $i++) {
+        $res[$i] = $str;
+    }
+    return $res;
+}
+
+$mass = [[]];
+for ($i = 0; $i < rand(1, 10); $i++) {
+    for ($j = 0; $j < rand(1, 10); $j++) {
+        $mass[$i][$j] = rand(1, 10);
+    }
+}
+$res = 0;
+for ($i = 0; $i < count($mass); $i++) {
+    for ($j = 0; $j < count($mass[$i]); $j++) {
+        $res += $mass[$i][$j];
+    }
+}
+echo "Сумма всех элементов: " . $res . "\n";
+$mass = [2, 5, 3, 9];
+for ($i = 0; $i < 2; $i++) {
+    $mass[$i] *= $mass[$i + 1];
+}
+$result = 0;
+for ($i = 0; $i < count($mass); $i++) {
+    $result += $mass[$i];
+}
+echo $result . "\n";
+
+$user = [
+    "name" => "Ilya",
+    "surname" => "Anisimov",
+    "patronymic" => "Alekseevich"
+];
+echo "$user[surname] $user[name] $user[patronymic]\n";
+
+$date = [
+    "year" => 2024,
+    "month" => 3,
+    "day" => 10
+];
+echo "$date[year]-$date[month]-$date[day]\n";
+
+$arr = ["a", "b", "c", "d", "e"];
+echo "Длинна массива: " . count($arr) . "\n";
+
+echo $arr[count($arr) - 1] . "\n";
+echo $arr[count($arr) - 2] . "\n";

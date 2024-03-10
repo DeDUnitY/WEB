@@ -254,3 +254,55 @@ echo "Длинна массива: " . count($arr) . "\n";
 
 echo $arr[count($arr) - 1] . "\n";
 echo $arr[count($arr) - 2] . "\n";
+
+// task 10
+echo "<h3>task 10:</h3>";
+function ten($a, $b)
+{
+    if ($a + $b > 10) {
+        return true;
+    }
+    return false;
+}
+
+function ravno($a, $b)
+{
+    if ($a == $b) {
+        return true;
+    }
+    return false;
+}
+
+$test = rand(0,1);
+if (!$test) echo "Верно";
+function Sumnum(int $num)
+{
+    $res = 0;
+    while ($res != 0) {
+        $res += $num % 10;
+        $num = intdiv($num, 10);
+    }
+    return $res;
+}
+
+$age = 15;
+if ($age < 10 || $age > 99) {
+    echo "число меньше 10 или больше 99\n";
+} else {
+    if (Sumnum($age) <= 9) {
+        echo "сумма цифр однозначна\n";
+    } else
+        echo "сумма цифр двузначна\n";
+}
+
+$arr = [];
+for ($i = 0; $i < rand(1, 10); $i++) {
+    $arr[$i] = rand(1, 10);
+}
+if (count($arr) == 3) {
+    $result = 0;
+    for ($i = 0; $i < count($arr); $i++) {
+        $result += $arr[$i];
+    }
+    echo "Сумма элементов: " . $result . "\n";
+}

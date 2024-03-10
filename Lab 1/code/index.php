@@ -306,3 +306,8 @@ if (count($arr) == 3) {
     }
     echo "Сумма элементов: " . $result . "\n";
 }
+// task 11
+echo "<h3>task 11:</h3>";
+for ($i = 1; $i < 21; $i++) {
+    echo str_repeat("x", $i) . "\n";
+}

@@ -2,10 +2,8 @@
 echo "<pre>";
 function PrintArr($arr)
 {
-    foreach($arr as $value) {
-        foreach($value as $val){
-            echo $val."\n";
-        }
+    foreach($arr[0] as $value) {
+        echo $value."\n";
     }
 }
 // task1

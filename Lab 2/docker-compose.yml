@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./task1:/task1
+      - ./task2:/task2
+      - ./task3:/task3
+      - ./site.conf:/etc/nginx/conf.d/site.conf
+    links:
+      - Anime
+  Anime:
+    image: php:8.3-fpm
+    volumes:
+      - ./task1:/task1
+      - ./task2:/task2
+      - ./task3:/task3

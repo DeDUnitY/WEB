@@ -1,0 +1,18 @@
+{
+    "name": "ded_unity/code",
+    "type": "project",
+    "require": {
+        "google/apiclient": "^2.16",
+        "asimlqt/php-google-spreadsheet-client": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DedUnity\\Code\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ded unity"
+        }
+    ]
+}
